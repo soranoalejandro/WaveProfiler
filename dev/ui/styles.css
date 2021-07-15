@@ -1,0 +1,18 @@
+* {
+    background-color: #090909;
+    color: rgb(42, 155, 91);
+}
+h1 {
+color: seagreen;
+}
+p {
+color: salmon;
+}
+div {
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 0px;
+    border-color: black;
+    border-bottom-style: solid;
+}

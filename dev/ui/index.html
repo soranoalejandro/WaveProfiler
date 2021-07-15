@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Profiler</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="client.js"></script>
+  </head>
+  <body>
+    <!--TOP BAR-->
+    <div>
+      <form style="display: inline-block;">
+        <!--SERIAL PORT SELECT-->
+        <label>serial:&NonBreakingSpace;</label>
+        <select name="port" id="port" onchange="sendEvent('port', this.value)">
+          <option value=""></option>
+        </select>
+        <!--BAUDRATE SELECT-->
+        <label>baudrate:&NonBreakingSpace;</label>
+        <select name="baud" id="baud" onchange="sendEvent('baudrate', this.value)">
+          <option value=""></option>
+          <option value="other">other</option>
+          <option value="9600">9600</option>
+          <option value="19200">19200</option>
+          <option value="38400">38400</option>
+          <option value="57600">57600</option>
+          <option value="115200">115200</option>
+          <option value="250000">250000</option>
+          <option value="1000000">1000000</option>
+          <option value="2000000">2000000</option>
+        </select>
+        <!--OPEN / CLOSE PORT BUTTON-->
+        <button type="button" id="open" onclick="sendEvent('open', {port: port.value, baud: baud.value})">open</button>
+        <!--PORT STATUS ICON-->
+        <abbr title="disconnected" id="status" >&#9744</abbr>
+        <!--button type="button" id="op" onclick="setOpenStatus(true)">op</button-->
+        <!--button type="button" id="cl" onclick="setOpenStatus(false)">cl</button-->
+      </form>
+    </div>
+  </body>
+</html>

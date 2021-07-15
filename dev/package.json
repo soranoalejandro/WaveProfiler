@@ -1,0 +1,16 @@
+{
+  "name": "wave-profiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wave-profiler.js",
+  "scripts": {
+    "start": "nodemon -e html,css,json,js wave-profiler.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alejandro Solano",
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^9.2.0",
+    "ws": "^7.5.3"
+  }
+}
